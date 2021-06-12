@@ -32,6 +32,12 @@ export class UserForm extends Component {
         endDateS : '',
         percentageS : '',
 
+        courseNameSchool2 : '',
+        schoolName2 : '',
+        startDateS2 : '',
+        endDateS2 : '',
+        percentageS2 : '',
+
         project1 : '',
         startDateP1 : '',
         endDateP1 : '',
@@ -44,10 +50,15 @@ export class UserForm extends Component {
         link2 : '',
         bioP2 : '',
 
-        company : '',
+        company1 : '',
         startDateC1 : '',
         endDateC1 : '',
-        bioCompany : '',
+        bioCompany1 : '',
+
+        company2 : '',
+        startDateC2 : '',
+        endDateC2 : '',
+        bioCompany2 : '',
 
         skill1 : '',
         skill2 : '',
@@ -58,13 +69,12 @@ export class UserForm extends Component {
 
         achievement1 : '',
         linkAch1 : '',
-        bioAch1 : '',
         achievement2 : '',
         linkAch2 : '',
-        bioAch2 : '',
         achievement3 : '',
         linkAch3 : '',
-        bioAch3 : '',
+        achievement4 : '',
+        linkAch4 : '',
 
         certificate1 : '',
         linkcert1 : '',
@@ -78,7 +88,7 @@ export class UserForm extends Component {
         interest1 : '',
         interest2 : '',
         interest3 : '',
-        interest4 : ''
+        interest4 : '',
     }
     nextStep = () => {
         const currStep = this.state.step;
@@ -112,7 +122,7 @@ export class UserForm extends Component {
             case 5:
                 return <Extras prevStep = {this.prevStep} nextStep = {this.nextStep} step={this.state.step} header="Fill Some Extra Details" handleChange={this.handleChange} value={this.state}/>
             case 6:
-                return <Sucess />
+                return <Sucess value={this.state}/>
             default:
                 break;
         }

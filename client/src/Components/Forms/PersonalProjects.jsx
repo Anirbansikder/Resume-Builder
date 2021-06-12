@@ -39,13 +39,13 @@ class PersonalProjects extends Component {
         return false;
     }
     checkErrorDatesP2 = () => {
-        if(!validator.isDate(this.props.value.startDateP2) || !validator.isDate(this.props.value.endDateP2)){
+        if(this.props.value.project2 !== '' && (!validator.isDate(this.props.value.startDateP2) || !validator.isDate(this.props.value.endDateP2))){
             return true;
         }
         return false;
     }
     checkError = () => {
-        if(this.checkErrorProjectName() || this.checkErrorURL1() || this.checkErrorURL2() || this.checkErrorDatesP1())
+        if(this.checkErrorProjectName() || this.checkErrorURL1() || this.checkErrorURL2() || this.checkErrorDatesP1() || this.checkErrorDatesP2())
             return true;
         return false;
     }

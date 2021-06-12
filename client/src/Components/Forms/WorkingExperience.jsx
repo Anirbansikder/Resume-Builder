@@ -17,29 +17,62 @@ class PersonalProjects extends Component {
         e.preventDefault();
         this.props.prevStep();
     }
-    checkErrorDates = () => {
-        if(this.props.value.company !== '' && (!validator.isDate(this.props.value.startDateC1) || !validator.isDate(this.props.value.endDateC1))){
+    checkErrorName = () => {
+        if(this.props.value.company1 === '')
+            return true;
+        return false;
+    }
+    checkErrorDates1 = () => {
+        if(this.props.value.company1 !== '' && (!validator.isDate(this.props.value.startDateC1) || !validator.isDate(this.props.value.endDateC1))){
+            return true;
+        }
+        return false;
+    }
+    checkErrorDates2 = () => {
+        if(this.props.value.company2 !== '' && (!validator.isDate(this.props.value.startDateC2) || !validator.isDate(this.props.value.endDateC2))){
+            return true;
+        }
+        return false;
+    }
+    checkError = () => {
+        if(this.checkErrorDates1() || this.checkErrorDates2() || this.checkErrorName()){
             return true;
         }
         return false;
     }
     render(){
-        const disabled = this.checkErrorDates();
+        const disabled = this.checkError();
+        const disabledName = this.checkErrorName();
+        const disabled1 = this.checkErrorDates1();
+        const disabled2 = this.checkErrorDates2();
         return (
             <Grow in={true} timeout={1000}>
                 <Paper elevation={6} style={{padding : '20px 20px' , margin : '15px 10px'}}>
                     <Typography variant='h5' color='primary' gutterBottom>{this.props.header}</Typography>
-                    <Typography variant='h6' color='textSecondary' align="left" style={{marginTop : 20}}>Working Experience</Typography>
+                    <Typography variant='h6' color='textSecondary' align="left" style={{marginTop : 20}}>Working Experience 1</Typography>
                     <Grid container spacing={3} style={{padding : 10 , marginBottom : 20}} >
-                        <Input name="company" label="Company Name" defaultValue={this.props.value.company} handleChange={this.props.handleChange} length={12} type="text" helperText="" disable={disabled}/>  
+                        <Input name="company1" label="Company Name" defaultValue={this.props.value.company1} handleChange={this.props.handleChange} length={12} type="text" helperText="Give atleast 1 Working Experience" disable={disabledName}/>  
                         <Grid container item lg={12} >
-                            <TextField id="outlined-basic" label="Brief About The Position" variant="outlined" fullWidth size="small" multiline rows={4} rowsMax={8} name="bioCompany" defaultValue={this.props.value.bioCompany} onChange={this.props.handleChange('bioCompany')}/>
+                            <TextField id="outlined-basic" label="Brief About The Position" variant="outlined" fullWidth size="small" multiline rows={4} rowsMax={8} name="bioCompany1" defaultValue={this.props.value.bioCompany1} onChange={this.props.handleChange('bioCompany1')}/>
                         </Grid>
                         <Grid container item lg={6} >
-                            <TextField id="date" label="Start date" type="date" defaultValue={this.props.value.startDateC1} onChange={this.props.handleChange('startDateC1')} InputLabelProps={{ shrink: true }} fullWidth helperText={disabled ? "Pick Proper Starting Date" : ""}/>
+                            <TextField id="date" label="Start date" type="date" defaultValue={this.props.value.startDateC1} onChange={this.props.handleChange('startDateC1')} InputLabelProps={{ shrink: true }} fullWidth helperText={disabled1 ? "Pick Proper Starting Date" : ""}/>
                         </Grid>
                         <Grid container item lg={6} >
-                            <TextField id="date" label="End date (Expected)" type="date" defaultValue={this.props.value.endDateC1} onChange={this.props.handleChange('endDateC1')} InputLabelProps={{ shrink: true }} fullWidth helperText={disabled ? "Pick Proper Ending Date" : ""}/>
+                            <TextField id="date" label="End date (Expected)" type="date" defaultValue={this.props.value.endDateC1} onChange={this.props.handleChange('endDateC1')} InputLabelProps={{ shrink: true }} fullWidth helperText={disabled1 ? "Pick Proper Ending Date" : ""}/>
+                        </Grid>
+                    </Grid>
+                    <Typography variant='h6' color='textSecondary' align="left" style={{marginTop : 20}}>Working Experience 2</Typography>
+                    <Grid container spacing={3} style={{padding : 10 , marginBottom : 20}} >
+                        <Input name="company2" label="Company Name" defaultValue={this.props.value.company2} handleChange={this.props.handleChange} length={12} type="text" helperText="" disable={disabled}/>  
+                        <Grid container item lg={12} >
+                            <TextField id="outlined-basic" label="Brief About The Position" variant="outlined" fullWidth size="small" multiline rows={4} rowsMax={8} name="bioCompany2" defaultValue={this.props.value.bioCompany2} onChange={this.props.handleChange('bioCompany2')}/>
+                        </Grid>
+                        <Grid container item lg={6} >
+                            <TextField id="date" label="Start date" type="date" defaultValue={this.props.value.startDateC2} onChange={this.props.handleChange('startDateC2')} InputLabelProps={{ shrink: true }} fullWidth helperText={disabled2 ? "Pick Proper Starting Date" : ""}/>
+                        </Grid>
+                        <Grid container item lg={6} >
+                            <TextField id="date" label="End date (Expected)" type="date" defaultValue={this.props.value.endDateC2} onChange={this.props.handleChange('endDateC2')} InputLabelProps={{ shrink: true }} fullWidth helperText={disabled2 ? "Pick Proper Ending Date" : ""}/>
                         </Grid>
                     </Grid>
                     <Buttons label="previous" click={this.previous} disable={this.props.step === 0} select="secondary" icon={<SkipPreviousIcon/>} position = "start"/>

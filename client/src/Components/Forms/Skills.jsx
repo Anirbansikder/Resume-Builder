@@ -1,6 +1,5 @@
 import React , { Component } from 'react';
 import { Grid  , Paper , Typography} from '@material-ui/core';
-import TextField from '@material-ui/core/TextField'
 import Buttons from '../Controls/Buttons.jsx';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -51,19 +50,12 @@ class Skills extends Component {
                     <Grid container spacing={3} style={{padding : 10}} >
                         <Input name="achievement1" label="Achievement 1" defaultValue={this.props.value.achievement1} handleChange={this.props.handleChange} length={8} type="text" helperText="" disable={disabled}/> 
                         <Input name="linkAch1" label="Provide Link" defaultValue={this.props.value.linkAch1} handleChange={this.props.handleChange} length={4} type="url" helperText="" disable={disabled}/>  
-                        <Grid container item lg={12} >
-                            <TextField id="outlined-basic" label="Brief About The Achievement" variant="outlined" fullWidth size="small" multiline rows={4} rowsMax={8} name="bioAch1" defaultValue={this.props.value.bioAch1} onChange={this.props.handleChange('bioAch1')}/>
-                        </Grid>
                         <Input name="achievement2" label="Achievement 2" defaultValue={this.props.value.achievement2} handleChange={this.props.handleChange} length={8} type="text" helperText="" disable={disabled}/> 
                         <Input name="linkAch2" label="Provide Link" defaultValue={this.props.value.linkAch2} handleChange={this.props.handleChange} length={4} type="url" helperText="" disable={disabled}/>  
-                        <Grid container item lg={12} >
-                            <TextField id="outlined-basic" label="Brief About The Achievement" variant="outlined" fullWidth size="small" multiline rows={4} rowsMax={8} name="bioAch2" defaultValue={this.props.value.bioAch2} onChange={this.props.handleChange('bioAch2')}/>
-                        </Grid>
                         <Input name="achievement3" label="Achievement 3" defaultValue={this.props.value.achievement3} handleChange={this.props.handleChange} length={8} type="text" helperText="" disable={disabled}/> 
                         <Input name="linkAch3" label="Provide Link" defaultValue={this.props.value.linkAch3} handleChange={this.props.handleChange} length={4} type="url" helperText="" disable={disabled}/>  
-                        <Grid container item lg={12} >
-                            <TextField id="outlined-basic" label="Brief About The Achievement" variant="outlined" fullWidth size="small" multiline rows={4} rowsMax={8} name="bioAch3" defaultValue={this.props.value.bioAch3} onChange={this.props.handleChange('bioAch3')}/>
-                        </Grid>
+                        <Input name="achievement4" label="Achievement 4" defaultValue={this.props.value.achievement4} handleChange={this.props.handleChange} length={8} type="text" helperText="" disable={disabled}/> 
+                        <Input name="linkAch4" label="Provide Link" defaultValue={this.props.value.linkAch3} handleChange={this.props.handleChange} length={4} type="url" helperText="" disable={disabled}/>  
                     </Grid>
                     <Buttons label="previous" click={this.previous} disable={this.props.step === 0} select="secondary" icon={<SkipPreviousIcon/>} position = "start"/>
                     <Buttons label="next" click={this.continue} disable={disabled} select="primary" icon={<NavigateNextIcon/>} position = "end"/>

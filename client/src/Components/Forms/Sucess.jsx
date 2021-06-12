@@ -9,12 +9,12 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 class Languages extends Component {
     continue = (e) => {
         e.preventDefault();
-        axios.post ('/create-pdf', this.props.values)
+        axios.post('http://localhost:5000/create-pdf', this.props.value)
             .then (() => {
-                axios.get ('fetch-pdf', {responseType: 'arraybuffer'})
+                axios.get ('http://localhost:5000/fetch-pdf', {responseType: 'arraybuffer'})
                     .then (res => {
                         const pdfBlob = new Blob ([res.data], {type: 'application/pdf'});
-                        saveAs (pdfBlob, `${this.props.value.firstname}'s Resume.pdf`);
+                        saveAs (pdfBlob, `${this.props.value.firstName}'s Resume.pdf`);
                     })
                     .catch (err => {
                         console.log (err);
