@@ -104,28 +104,28 @@ module.exports = (values) => {
 		font-style: normal;
 	}
 	.name{
-		font-size: 45px !important;
+		font-size: 30px !important;
 		letter-spacing: 4px !important;
 		font-weight: 600 !important;
-		line-height: 50px !important;
+		line-height: 35px !important;
 		color: #000 !important;
 		margin-bottom: 10px !important;
 		text-transform: uppercase !important;
 	}
 	h2 {
-		font-size: 40px !important;
+		font-size: 20px !important;
 		letter-spacing: 5px !important;
 		font-weight: 600 !important;
 		color: #000 !important;
 	}
 	h3 {
-		font-size: 30px !important;
+		font-size: 10px !important;
 		letter-spacing: 1px !important;
 		font-weight: 500 !important;
 		color: #000 !important;
 	}
 	h4 {
-		font-size: 25px !important;
+		font-size: 5px !important;
 		letter-spacing: 1px !important;
 		font-weight: 400 !important;
 		color: #000 !important;
@@ -142,8 +142,8 @@ module.exports = (values) => {
 		border-top : solid black !important; 
 	}
 	p{
-		font-size : 20px !important;
-		line-height: 25px !important;
+		font-size : 10px !important;
+		line-height: 15px !important;
 	}
 	</style>
     </head>
