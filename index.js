@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const options = {
-	height: "40cm",
+	height: "43cm",
 	width: "28cm",
 };
 
