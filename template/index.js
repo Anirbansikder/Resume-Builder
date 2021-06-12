@@ -125,7 +125,7 @@ module.exports = (values) => {
 		color: #000 !important;
 	}
 	h4 {
-		font-size: 7px !important;
+		font-size: 10px !important;
 		letter-spacing: 1px !important;
 		font-weight: 400 !important;
 		color: #000 !important;
@@ -189,7 +189,7 @@ module.exports = (values) => {
 		<hr>
 		<div class="container">
 			<div class="row">
-			  	<div class="col-xs-6" style="margin-top: 2px !important;">
+			  	<div class="col-xs-6" style="margin-top: 0 !important;">
 					<h2>EDUCATION</h2>
 					<div style="padding: 0 0 2px 10px !important;">
 						<h3>${collegeName}</h3>
@@ -207,10 +207,10 @@ module.exports = (values) => {
 						<h3>${schoolName2}</h3>
 						<h4>${courseNameSchool2}</h4>
 						<span style="font-size: x-small !important; color : rgb(173, 170, 170) !important; margin-top: 5px !important;">${startDateS2} - ${endDateS2}</span>
-						<span style="font-size: x-small !important; color : rgb(173, 170, 170) !important; margin-top: 5px !important; float: right !important; color : #000"><b>CGPA/Percentage : ${percentageS2}</b></span>
+						<span style="font-size: x-small !important; color : rgb(173, 170, 170) !important; margin-top: 5px !important; float: right !important; color : #000">CGPA/Percentage : ${percentageS2}</span>
 					</div>
 			  	</div>
-			  	<div class="col-xs-6" style="margin-top: 2px !important;">
+			  	<div class="col-xs-6" style="margin-top: 0 !important;">
 					<h2>Work Experience</h2>
 					<div style="padding: 0 0 2px 10px !important;">
 						<h3>${company1}</h3>
@@ -227,7 +227,7 @@ module.exports = (values) => {
 					htmlTemplate += `</div>
 			</div>
 			<div class="row justify-content-start">
-				<div class="col-xs-6" style="margin-top: 2px !important;">
+				<div class="col-xs-6" style="margin-top: 0 !important;">
 					<h2>Personal Projects</h2>
 					<div style="padding: 0 0 2px 10px !important;">
 						<h3>${project1}</h3>
@@ -244,29 +244,29 @@ module.exports = (values) => {
 										</div>`
 					}
 					htmlTemplate += `</div>
-			  	<div class="col-xs-6" style="margin-top: 2px !important;">
+			  	<div class="col-xs-6" style="margin-top: 0 !important;">
 					<h2>Skills</h2>
 					<div style="padding: 5px 0 5px 10px !important;">
 						<div style="display: flex !important; justify-content: flex-start  !important; align-items: center !important;">`
 						if(skill1 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill1}</button>`
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill1}</button>`
 						}
 						if(skill2 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill2}</button>`
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill2}</button>`
 						}
 						if(skill3 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill3}</button>`
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill3}</button>`
 						}
 						htmlTemplate += `</div>
 						<div style="margin-top: 5px !important; display: flex !important; justify-content: flex-start  !important; align-items: center !important;">`
 						if(skill4 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill4}</button>`
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill4}</button>`
 						}
 						if(skill5 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill5}</button>`
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill5}</button>`
 						}
 						if(skill6 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill6}</button>`
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${skill6}</button>`
 						}
 						htmlTemplate += `</div>
 					</div>
@@ -274,13 +274,13 @@ module.exports = (values) => {
 					<div style="padding: 5px 0 5px 10px !important;">
 						<div style="display: flex !important; justify-content: flex-start  !important; align-items: center !important;">`
 						if(language1 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${language1}</button>`;
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${language1}</button>`;
 						}
 						if(language2 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${language1}</button>`;
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${language1}</button>`;
 						}
 						if(language3 !== ''){
-							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${language3}</button>`;
+							htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${language3}</button>`;
 						}
 						htmlTemplate += `</div>
 					</div>`
@@ -289,16 +289,16 @@ module.exports = (values) => {
 						<div style="padding: 5px 0 5px 10px !important;">
 							<div style="display: flex !important; justify-content: flex-start  !important; align-items: center !important;">`
 								if(interest1 !== ''){
-									htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest1}</button>`
+									htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest1}</button>`
 								}
 								if(interest2 !== ''){
-								  htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest2}</button>`
+								  htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest2}</button>`
 							  }
 							  if(interest3 !== ''){
-								  htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest3}</button>`
+								  htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest3}</button>`
 							  }
 							  if(interest4 !== ''){
-								  htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 3px 5px 3px 5px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest4}</button>`
+								  htmlTemplate += `<button style="border-radius: 10px !important; border: solid 1px black !important; padding: 5px 10px 5px 10px !important; margin : 0 15px 0 15px !important; font-size: x-small !important;">${interest4}</button>`
 							  }
 						  htmlTemplate += `</div>
 						</div>`
@@ -307,7 +307,7 @@ module.exports = (values) => {
 		  	</div>
 			  <div class="row justify-content-start">`
 			  if(achievement_number !== 0){
-				  htmlTemplate += `<div class="col-xs-6" style="margin-top: 2px !important;">
+				  htmlTemplate += `<div class="col-xs-6" style="margin-top: 0 !important;">
 				  <h2>Achievements</h2>
 				  <div style="padding: 5px 0 5px 10px !important;">
 					  <ul>`
@@ -331,7 +331,7 @@ module.exports = (values) => {
 				  </div>
 				</div>`
 			  }
-			  	htmlTemplate += `<div class="col-xs-6" style="margin-top: 2px !important;">`
+			  	htmlTemplate += `<div class="col-xs-6" style="margin-top: 0 !important;">`
 				  if(certificate_number !== 0){
 					  htmlTemplate += `<h2>Certifications</h2>
 					  <div style="padding: 5px 0 5px 10px !important;">
